@@ -20,6 +20,9 @@ function verifyRandomPIN() {
         successMessage.style.display = 'block';
         errorMessage.style.display = 'none';
         submitButton.disabled = false;
+
+        // Redirect to ok.html
+        window.location.href = 'ok.html';
     } else {
         errorMessage.style.display = 'block';
         successMessage.style.display = 'none';

@@ -27,16 +27,17 @@ function verifyRandomPIN() {
     }
 }
 
-document.getElementById('submitButton').addEventListener('click', function (event) {
+document.getElementById('form').addEventListener('submit', function (event) {
     if (document.getElementById('submitButton').disabled) {
         event.preventDefault();
         console.log("Cannot submit the form until PIN is verified.");
     } else {
         // Continue with form submission or any other actions if needed
-        // Add a click event listener for the Submit button
-        document.getElementById('submitButton').addEventListener('click', function () {
-            // Redirect to ok.html
-            window.location.href = 'ok.html';
-        });
     }
+});
+
+// Add a click event listener for the Submit button
+document.getElementById('submitButton').addEventListener('click', function () {
+    // Redirect to ok.html
+    window.location.href = 'ok.html';
 });

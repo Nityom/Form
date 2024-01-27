@@ -14,30 +14,12 @@ function verifyRandomPIN() {
     const enteredPIN = document.getElementById('pin').value;
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
-    const submitButton = document.getElementById('submitButton');
 
     if (enteredPIN === randomPIN.toString()) {
         successMessage.style.display = 'block';
         errorMessage.style.display = 'none';
-        submitButton.disabled = false;
     } else {
         errorMessage.style.display = 'block';
         successMessage.style.display = 'none';
-        submitButton.disabled = true;
     }
 }
-
-document.getElementById('form').addEventListener('submit', function (event) {
-    if (document.getElementById('submitButton').disabled) {
-        event.preventDefault();
-        console.log("Cannot submit the form until PIN is verified.");
-    } else {
-        // Continue with form submission or any other actions if needed
-    }
-});
-
-// Add a click event listener for the Submit button
-document.getElementById('submitButton').addEventListener('click', function () {
-    // Redirect to ok.html
-    window.location.href = 'ok.html';
-});

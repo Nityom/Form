@@ -27,7 +27,7 @@ function verifyRandomPIN() {
     }
 }
 
-document.getElementById('form').addEventListener('submit', function (event) {
+document.getElementById('submitButton).addEventListener('click', function () {
     if (document.getElementById('submitButton').disabled) {
         event.preventDefault();
         console.log("Cannot submit the form until PIN is verified.");

@@ -20,9 +20,6 @@ function verifyRandomPIN() {
         successMessage.style.display = 'block';
         errorMessage.style.display = 'none';
         submitButton.disabled = false;
-
-        // Redirect to ok.html
-        window.location.href = 'ok.html';
     } else {
         errorMessage.style.display = 'block';
         successMessage.style.display = 'none';
@@ -34,5 +31,8 @@ document.getElementById('form').addEventListener('submit', function (event) {
     if (document.getElementById('submitButton').disabled) {
         event.preventDefault();
         console.log("Cannot submit the form until PIN is verified.");
+    } else {
+        // Redirect to ok.html
+        window.location.href = 'ok.html';
     }
 });

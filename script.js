@@ -33,11 +33,12 @@ document.getElementById('form').addEventListener('submit', function (event) {
         console.log("Cannot submit the form until PIN is verified.");
     } else {
         // Continue with form submission or any other actions if needed
-    }
-});
-
-// Add a click event listener for the Submit button
+        // Add a click event listener for the Submit button
 document.getElementById('submitButton').addEventListener('click', function () {
     // Redirect to ok.html
     window.location.href = 'ok.html';
+    }
+});
+
+
 });
